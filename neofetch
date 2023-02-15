@@ -5526,6 +5526,28 @@ get_distro_ascii() {
     #
     # $ascii_distro is the same as $distro.
     case $(trim "$ascii_distro") in
+        "TDC"*)
+            set_colors 2 3
+            read -rd '' ascii_data <<'EOF'
+${c2}           .,:cloooolc:,.
+         .;lddddddddddddddddl;.
+       .cdddddddxxxxdddddddddddc.
+      :ddddddddk    ddddddddddddd:
+     ldddddddddk    xxxxddddddddddl
+    lddddddddddk        kddddddddddl
+   'dddddddddddk        xddddddddddd'
+   :dddddddddddk    dddddddddddddddd:
+   :dddddddddddk    dddddddddddddddd:
+   'dddddddddddk    dddddddddddddddd'
+    lddddddddddx     ddddddddddddddl
+     lddddddddddk         xdddddddl
+      :ddddddddddd         dddddd:
+       .cdddddddddddddxxdddddddc.
+         .,lddddddddddddddddl,.
+             .';:cllllc:;'.
+EOF
+        ;;
+
         "AIX"*)
             set_colors 2 7
             read -rd '' ascii_data <<'EOF'
